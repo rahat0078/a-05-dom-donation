@@ -48,7 +48,7 @@
                 </div>
             </div>
         </nav>
-        <div class="py-6 flex justify-center items-center backdrop-blur-xl">
+        <div class="py-6 flex justify-center items-center bg-white">
             <section class="flex justify-center items-center gap-4">
                 <button id="donation-tab" class="py-4 px-8 font-semibold border rounded-lg bg-primary_btn">Donation</button>
                 <button id="history-tab" class="py-4 px-8 font-semibold border rounded-lg">History</button>
@@ -68,7 +68,7 @@
                         <img src="./assets/coin.png" alt="">
                         <p><span id="total-donation-noakhali">8500</span> BDT</p>
                     </button>
-                    <h2 class="font-bold text-xl">Donate for Flood at Noakhali, Bangladesh</h2>
+                    <h2 class="font-bold text-xl">Donate for <span id="area-noakhali">Flood at Noakhali, Bangladesh</span></h2>
                     <p class="text-gray-500"> The recent floods in Noakhali have caused significant damage to homes
                         infrastructure. Your donation will help provide essential supplies and to those affected by this
                         disaster. Every contribution, big or small, makes difference. Please join us in supporting the
@@ -90,7 +90,7 @@
                         <img src="./assets/coin.png" alt="">
                         <p><span id="total-donation-feni">5000</span> BDT</p>
                     </button>
-                    <h2 class="font-bold text-xl">Donate for Flood Relief in Feni,Bangladesh</h2>
+                    <h2 class="font-bold text-xl">Donate for <span id="area-feni">Flood Relief in Feni,Bangladesh</span></h2>
                     <p class="text-gray-500"> The recent floods in Feni have devastated local communities, leading to
                         severe disruption and loss. Your generous donation will help provide immediate aid, including
                         food, clean water, and medical supplies, to those affected by this calamity. Together, we can
@@ -114,7 +114,7 @@
                         <img src="./assets/coin.png" alt="">
                         <p><span id="total-donation-qouta">7500</span> BDT</p>
                     </button>
-                    <h2 class="font-bold text-xl">Aid for Injured in the Quota Movement</h2>
+                    <h2 class="font-bold text-xl" id="area-quota">Aid for Injured in the Quota Movement</h2>
                     <p class="text-gray-500">The recent Quota movement has resulted in numerous injuries and significant
                         hardship for many individuals. Your support is crucial in providing medical assistance,
                         rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that
@@ -131,11 +131,8 @@
         </div>
 
         <!-- History -->
-        <div id="history" class="space-y-8 mt-8 hidden">
-            <!-- <div class="border p-8 rounded-2xl ">
-                <h2 class="font-bold text-xl"><span></span> Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
-                <p class="text-gray-500"></p>
-            </div> -->
+        <div id="history-container" class="space-y-8 mt-8 hidden">
+            
         </div>
 
     </main>
