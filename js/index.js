@@ -74,3 +74,8 @@ donationTab.addEventListener('click', function () {
     document.getElementById("history-container").classList.add('hidden')
     document.getElementById("donation-main").classList.remove('hidden')
 })
+
+// blog page 
+document.getElementById('blog-button').addEventListener('click', function(){
+    window.location.href = "./blog.html"
+})
