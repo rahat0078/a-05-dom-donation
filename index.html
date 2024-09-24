@@ -36,7 +36,8 @@
         <nav class="bg-nav_bg py-7">
             <div class="container mx-auto flex justify-between">
                 <div>
-                    <button id="blog-button" class="btn bg-primary_btn text-xl">Blog</button>
+                    <button class="btn bg-primary_btn text-xl"><a href="./blog.html">Blog</a>
+                    </button>
                 </div>
                 <div class="flex justify-center items-center gap-4">
                     <img src="./assets/logo.png" alt="">
@@ -50,7 +51,8 @@
         </nav>
         <div class="py-6 flex justify-center items-center bg-white">
             <section class="flex justify-center items-center gap-4">
-                <button id="donation-tab" class="py-4 px-8 font-semibold border rounded-lg bg-primary_btn">Donation</button>
+                <button id="donation-tab"
+                    class="py-4 px-8 font-semibold border rounded-lg bg-primary_btn">Donation</button>
                 <button id="history-tab" class="py-4 px-8 font-semibold border rounded-lg">History</button>
             </section>
         </div>
@@ -68,7 +70,8 @@
                         <img src="./assets/coin.png" alt="">
                         <p><span id="total-donation-noakhali">8500</span> BDT</p>
                     </button>
-                    <h2 class="font-bold text-xl">Donate for <span id="area-noakhali">Flood at Noakhali, Bangladesh</span></h2>
+                    <h2 class="font-bold text-xl">Donate for <span id="area-noakhali">Flood at Noakhali,
+                            Bangladesh</span></h2>
                     <p class="text-gray-500"> The recent floods in Noakhali have caused significant damage to homes
                         infrastructure. Your donation will help provide essential supplies and to those affected by this
                         disaster. Every contribution, big or small, makes difference. Please join us in supporting the
@@ -90,7 +93,8 @@
                         <img src="./assets/coin.png" alt="">
                         <p><span id="total-donation-feni">5000</span> BDT</p>
                     </button>
-                    <h2 class="font-bold text-xl">Donate for <span id="area-feni">Flood Relief in Feni,Bangladesh</span></h2>
+                    <h2 class="font-bold text-xl">Donate for <span id="area-feni">Flood Relief in Feni,Bangladesh</span>
+                    </h2>
                     <p class="text-gray-500"> The recent floods in Feni have devastated local communities, leading to
                         severe disruption and loss. Your generous donation will help provide immediate aid, including
                         food, clean water, and medical supplies, to those affected by this calamity. Together, we can
@@ -125,24 +129,42 @@
                         <input id="donation-quota" type="text" placeholder="Write Donation Amount"
                             class="input input-bordered w-full mt-4" />
                     </div>
-                    <button id="btn-donate-3" class="btn bg-primary_btn w-full text-xl">Donate Now</button>
+                    <button id="btn-donate-3"class="btn bg-primary_btn w-full text-xl">Donate Now</button>
                 </div>
             </section>
         </div>
 
         <!-- History -->
         <div id="history-container" class="space-y-8 mt-8 hidden">
-            
+
         </div>
 
     </main>
+    <!-- modal  -->
+    <section>
+        <dialog id="my_modal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box text-center">
+                <h3 class="text-4xl font-bold">Congrats!</h3>
+                <div class="flex justify-center mt-5">
+                    <img src="./assets/coin.png" alt="">
+                </div>
+                <p class="py-4">You have donated for humankind</p>
+                <h5 class="font-bold text-2xl">Successfully</h5>
+                <div class="modal-action flex justify-center">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn btn-primary_btn">Close confirmation</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+    </section>
 
     <footer class="bg-nav_bg w-full h-28"> </footer>
 
 
 
-    <script src="./js/utilities.js"></script>
-    <script src="./js/index.js"></script>
+    <script type='text/javascript' src="./js/index.js"></script>
 </body>
 
 </html>

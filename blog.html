@@ -7,13 +7,31 @@
     <title>Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "nav_bg": '#F9F7F3',
+                        "primary_btn": "#B4F461",
+                    },
+                    fontFamily: {
+                        "customFont": ["Lexend", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
     <main class="container mx-auto">
-        <div class="flex gap-4 items-center">
-            <img src="./assets/faq.jpeg" alt="">
-            <h2 class="text-3xl font-bold ">About <span class="text-yellow-400">JS DOM</span></h2>
+        <div class="flex justify-between items-center flex-wrap">
+            <div class="flex gap-4 items-center">
+                <img src="./assets/faq.jpeg" alt="">
+                <h2 class="text-3xl font-bold ">About <span class="text-yellow-400">JS DOM</span></h2>
+            </div>
+            <button id="navigate" class="btn bg-primary_btn text-xl"><a href="./index.html">Donation</a></button>
         </div>
         <div class="collapse collapse-arrow bg-base-200 my-2">
             <input type="radio" name="my-accordion-2" checked="checked" />

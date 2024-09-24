@@ -5,6 +5,21 @@ function getValueById(inputId) {
 function getInnerTextById(elementId) {
     return parseFloat(document.getElementById(elementId).innerText);
 }
+const localDate = new Date()
+const options = {
+    timeZone: 'Asia/Dhaka',
+    weekday: 'short',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    timeZoneName: 'short'
+  };
+  
+  const bangladeshTime = new Intl.DateTimeFormat('en-US', options).format(localDate);
+
 
 function addDonation(clickBtn, inputDonation, totalDonationId, donationAreaNameId) {
     document.getElementById(clickBtn)
@@ -34,9 +49,10 @@ function addDonation(clickBtn, inputDonation, totalDonationId, donationAreaNameI
             historyItem.classList.add("border", "p-8", "rounded-2xl");
 
             historyItem.innerHTML = `
-                <h2 class="font-bold text-xl">${inputDonationAmount} Taka is Donated for ${donationAreaName}</h2>
-                <p class="text-gray-500">${new Date().toLocaleDateString()}</p>
+                <h2 class="font-bold text-xl my-2">${inputDonationAmount} Taka is Donated for ${donationAreaName}</h2>
+                <p class="text-gray-500">Date: ${bangladeshTime + "(Bangladesh standard time)"}</p>
             `
+
 
             document.getElementById("history-container").insertBefore(historyItem, historyContainer.firstChild)
         })
@@ -75,7 +91,18 @@ donationTab.addEventListener('click', function () {
     document.getElementById("donation-main").classList.remove('hidden')
 })
 
-// blog page 
-document.getElementById('blog-button').addEventListener('click', function(){
-    window.location.href = "./blog.html"
-})
+
+function modalShow(button, donationFieldINput) {
+    document.getElementById(button).addEventListener('click', function () {
+        const donationInput = getValueById(donationFieldINput)
+        const mainBalance = getInnerTextById('main-balance')
+        if (isNaN(donationInput) === false && donationInput > 0 && donationInput < mainBalance) {
+            return my_modal.showModal();
+        }
+    })
+}
+modalShow("btn-donate-1", "donation-noakhali")
+modalShow("btn-donate-2", "donation-feni")
+modalShow("btn-donate-3", "donation-quota")
+
+
