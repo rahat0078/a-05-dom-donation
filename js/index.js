@@ -5,20 +5,6 @@ function getValueById(inputId) {
 function getInnerTextById(elementId) {
     return parseFloat(document.getElementById(elementId).innerText);
 }
-const localDate = new Date()
-const options = {
-    timeZone: 'Asia/Dhaka',
-    weekday: 'short',
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
-    timeZoneName: 'short'
-  };
-  
-  const bangladeshTime = new Intl.DateTimeFormat('en-US', options).format(localDate);
 
 
 function addDonation(clickBtn, inputDonation, totalDonationId, donationAreaNameId) {
@@ -50,7 +36,7 @@ function addDonation(clickBtn, inputDonation, totalDonationId, donationAreaNameI
 
             historyItem.innerHTML = `
                 <h2 class="font-bold text-xl my-2">${inputDonationAmount} Taka is Donated for ${donationAreaName}</h2>
-                <p class="text-gray-500">Date: ${bangladeshTime + "(Bangladesh standard time)"}</p>
+                <p class="text-gray-500">Date: ${new Date()}</p>
             `
 
 
